@@ -1,8 +1,11 @@
-.big{
-    display: flex;
-    margin: 10px;
+body{
+    color: var(--tg-theme-color);
+    background: var(--tg-theme-bg-color);
+    text-align: center;
+    align-items: center;
 }
 .card {
+    text-align: center;
     width: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -20,8 +23,8 @@
     margin-top: 10px;
   }
   
-  p {
-    font-size: 14px;
+  .price {
+    font-size: 16px;
     margin-top: 5px;
   }
   
@@ -36,10 +39,33 @@
     font-size: 16px;
     margin-top: 10px;
     cursor: pointer;
+    color: var(--tg-theme-button-color);
+    background: var(--tg-theme-button-text-color);
+  }
+  .buy-button:hover{
+    background: var(--tg-theme-secondary-bg-color);
   }
   
-  @media (max-width: 768px) {
+  @media (max-width: 600px) {
     .card {
       width: 100%;
+    }
+  }
+  
+  @media (min-width: 601px) and (max-width: 900px) {
+    .card {
+      width: 50%;
+    }
+  }
+  
+  @media (min-width: 901px) and (max-width: 1200px) {
+    .card {
+      width: 33.33%;
+    }
+  }
+  
+  @media (min-width: 1201px) {
+    .card {
+      width: 25%;
     }
   }

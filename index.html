@@ -7,13 +7,35 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="card">
-        <img src="https://www.foodandwine.com/thmb/pwFie7NRkq4SXMDJU6QKnUKlaoI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Ultimate-Veggie-Burgers-FT-Recipe-0821-5d7532c53a924a7298d2175cf1d4219f.jpg" alt="Burger">
-        <h3>Burger</h3>
-        <p class="price">$8.99</p>
-        <button class="buy-button">Buy Now</button>
-      </div>
-      <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <div id="main">
+        <h1>Burger shop</h1>
+        <img src="pngwing.com.png" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, excepturi.
+        </p>
+        <button id="buy">Buy</button>
+    </div>
 
+    <form id="form">
+        <input type="text" placeholder="name" id="user_name">
+        <input type="email" placeholder="email" id="user_email">
+        <input type="number" placeholder="Phone" id="user_phone">
+        <button id="order">Order</button>
+    </form>
+      <script src="https://telegram.org/js/telegram-web-app.js"></script>
+      <script>
+        let tg = window.Telegram.WebApp;
+        let buy = document.getElementById("buy");
+        let order = document.getElementById("order");
+
+
+        buy.addEventListener("click", () => {
+            document.getElementById("main").style.display = "none";
+            document.getElementById("form").style.display = "block";
+            document.getElementById("user_name").value = tg.initDataUnsafe.first_name + " " + tg.initDataUnsafe.last_name;
+        });
+        order.getElementById("click", () => {
+            tg.close();
+        });
+      </script>
 </body>
 </html>
